@@ -1,0 +1,23 @@
+const Manager = {
+    name: "John",
+    age: 27,
+    job: "Software Engineer"
+  }
+  const Intern = {
+    name: "Ben",
+    age: 21,
+    job: "Software Engineer Intern"
+  }
+  
+  function sayHi() {
+    console.log(`Hello, my name is ${this.name}`)
+  }
+  
+  // add sayHi function to both objects
+  Manager.sayHi = sayHi;
+  Intern.sayHi = sayHi;
+
+  Intern.name = "ganapathi"
+  
+  Manager.sayHi(); // Hello, my name is John
+  Intern.sayHi(); // Hello, my name is Ben
